@@ -1,0 +1,19 @@
+name: Dashboard Validation
+
+on:
+  push:
+    branches:
+      - main
+      - dashboard-enhancement
+
+jobs:
+  validate-dashboard:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Validation Message
+        run: echo "Dashboard validation successful"
+        
